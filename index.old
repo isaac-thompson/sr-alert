@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Screen Reader and Alert Test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<div class="container">
+
+  <div class="center">
+    <h1>Screen Reader Alert Test</h1>
+  </div>
+
+  <div>
+    <hr>
+  </div>
+
+  <div>
+    <h2>Example: Making an element with an alert role visible</h2>
+    <p>If an element already has role="alert" and is initially hidden using CSS, making it visible will cause the alert
+      to
+      fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times.
+    </p>
+    <p>
+      Note: In most cases this approach is not recommended, because it's not ideal to hide error or alert text that is
+      currently not applicable. Users of older assistive technology may still be able to perceive the alert text even
+      when
+      the alert does not currently applies, causing users to incorrectly believe that there is a problem.
+    </p>
+  </div>
+
+
+  <!--############# Hidden visually - and from SR's, - maintains layout #############-->
+  <div>
+    <p id="expirationWarning" role="alert" class="xinvisible">
+      This is extremely important information.
+      Your log in session will expire in 2 minutes
+      This Content is located at the bottom of the page!
+    </p>
+  </div>
+
+</div>
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+</body>
+
+</html>
