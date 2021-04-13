@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Screen Reader and Alert Test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="container">
+  <header>
+    <div class="center">
+      <h1>Screen Reader Test</h1>
+    </div>
+  </header>
+  <hr>
+  <main>
+    <div>
+      <h2>How to announce an element using  role = "alert"</h2>
+      <p>If an element already has role="alert" and is initially hidden using CSS, making it visible will cause the
+        alert
+        to fire as if it was just added to the page. This means that an existing alert can be "reused" multiple times.
+      </p>
+      <p>
+        Note: In some cases users of older assistive technology may still be able to perceive the alert text even
+        if the alert does not currently apply, causing users to incorrectly believe that there is a problem.
+      </p>
+    </div>
+    <div>
+      <h3>What is accessibility</h3>
+      <p>Accessibility (often abbreviated to A11y—as in "a" then 11 characters then "y") in Web development means
+        enabling as many people as possible to use Web sites, even when those people's abilities are limited in some
+        way.
+        For many people, technology makes things easier. For people with disabilities, technology makes things possible.
+        Accessibility means developing content to be as accessible as possible no matter an individual's physical and
+        cognitive abilities and no matter how they access the web.
+      </p>
+    </div>
+    <div class="margin-10">
+      <label for="vetId" title="Veteran ID">Veteran ID</label>
+      <input id="vetId" maxlength="12">
+      <button id="lookUpButton" type="submit">Look up Number</button>
+    </div>
+    <div>
+     	<p>Cette phrase est en français.</p>
+      <p lang="fr"> Cette phrase est en fran&ccedil;ais </p>
+
+    </div>
+    <!--############# Maintains layout, Hidden from SR's and visually #############-->
+    <div id="errorAlertForSR" role="alert" class="invisible alertRed">
+      <h3>ERROR</h3>
+      <p>
+        This div simulates an error message to the user after entering a wrong number in the search box.
+        <br>This page is a static html document containing an error message hidden by CSS.
+        The error message is not visible until the page has been reloaded.
+        <br>Using role="alert" the content of this div will be read before all
+        other content after reloading...
+        <br>This content is semantically located in a div at the bottom of the page but
+        a modern screen reader will recognize this is an alert and read it first!
+      </p>
+    </div>
+  </main>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
